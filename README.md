@@ -1,8 +1,8 @@
 # Playwright-redmine-ts
 
-## Test task login and exploratory flow for cypress
+## Test task login and exploratory flow for playwright
 
-### Automated tests of https://www.redmine.org/ website with using of Page Object pattern. Tests perfoms implementation of testcases for this website
+### Automated tests of https://www.saucedemo.com/ website with using of Page Object pattern. Tests perfoms implementation of testcases for this website
 
 #### Requirements: TS,NodeJS,Playwright,TS
 
@@ -10,7 +10,7 @@
 
 - Download and install Node.JS (at least 14.X)(https://nodejs.org/uk/)
 - Install Visual Studio Code (https://code.visualstudio.com/)
-- Open VS code terminal and clone repository `git clone https://github.com/DimaSmaha/playwright-redmine`
+- Open VS code terminal and clone repository `git clone https://github.com/DimaSmaha/playwright-saucedemo`
 - Install playwright using `npm init playwright@latest`
 - Run in terminal `npm i` to install all you needed
 - Enter `npx plawright test` to run tests
