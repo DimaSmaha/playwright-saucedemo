@@ -33,4 +33,15 @@ test.describe("Inventory page tests", () => {
     expect(await inventory.backpackRemoveFromCartBtn).toBeVisible();
     expect(await inventory.cartCounter).toContainText("1");
   });
+
+  test("User adds  and  removes backpack to the cart", async ({ page }) => {
+    let inventory = new inventoryPage(page);
+
+    await inventory.backpackAddToCartBtn.click();
+    expect(await inventory.backpackRemoveFromCartBtn).toBeVisible();
+    await inventory.backpackRemoveFromCartBtn.click();
+    expect(await inventory.backpackRemoveFromCartBtn).not.toBeVisible();
+    expect(await inventory.backpackAddToCartBtn).toBeVisible();
+    expect(await inventory.cartCounter).not.toBeVisible();
+  });
 });
