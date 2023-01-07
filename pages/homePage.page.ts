@@ -9,12 +9,14 @@ export class homePage {
   readonly usernameInput: Locator;
   readonly passwordInput: Locator;
   readonly loginBtn: Locator;
+  readonly loginError: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.usernameInput = page.locator('[id="user-name"]');
     this.passwordInput = page.locator('[id="password"]');
     this.loginBtn = page.locator('[id="login-button"]');
+    this.loginError = page.locator('[data-test="error"]');
   }
 
   async checkPageUrl() {
