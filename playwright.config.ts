@@ -3,11 +3,11 @@ import { devices } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
   testDir: "./tests",
-  timeout: 300000,
+  timeout: 15000,
   expect: {
     timeout: 5000,
   },
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
     locale: "en-GB",
     actionTimeout: 0,
     trace: "on",
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
   },
