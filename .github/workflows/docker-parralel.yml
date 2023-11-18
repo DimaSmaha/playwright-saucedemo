@@ -1,19 +1,19 @@
-name: PW Tests
+name: Playwright Tests
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
-  test:
-    timeout-minutes: 3
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 20
-    - name: Build Docker image
-      run: docker build . -t pw-tests-5
-    - name: Run PW tests on Docker
-      run: docker run w-tests-5
+  test:
+    timeout-minutes: 3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Build Docker image
+        run: docker build . -t pw-test-5
+      - name: Run PW tests on Docker
+        run: docker run pw-test-5
